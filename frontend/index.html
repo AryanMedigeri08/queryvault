@@ -397,13 +397,13 @@
 
     .history {
       padding: 16px;
-      min-height: 400px;
+      min-height: 700px;
     }
 
     .history-list {
       display: grid;
       gap: 8px;
-      max-height: 520px;
+      max-height: 1040px;
       overflow: auto;
       margin-top: 14px;
     }
@@ -621,7 +621,6 @@
         <main class="content">
           <section class="stats">
             <article class="panel stat"><div class="label">Tables</div><div id="statTables" class="value">--</div></article>
-            <article class="panel stat"><div class="label">Rows</div><div id="statRows" class="value">--</div></article>
             <article class="panel stat"><div class="label">DB Size</div><div id="statSize" class="value">--</div></article>
             <article class="panel stat"><div class="label">Indexes</div><div id="statIndexes" class="value">--</div></article>
           </section>
@@ -839,7 +838,6 @@
 
     function renderStats(stats) {
       el.statTables.textContent = formatNumber(stats.tableCount);
-      el.statRows.textContent = formatNumber(stats.totalRows);
       el.statSize.textContent = stats.dbSize || "--";
       el.statIndexes.textContent = formatNumber(stats.indexCount);
     }
